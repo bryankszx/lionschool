@@ -22,8 +22,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.lionschool.R
+
 @Composable
 fun HomeScreen() {
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -33,7 +35,7 @@ fun HomeScreen() {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(top = 50.dp),
-            verticalArrangement = Arrangement.Top, // Isso coloca os elementos no topo
+            verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Row(
@@ -48,20 +50,22 @@ fun HomeScreen() {
                 )
                 Spacer(modifier = Modifier.width(12.dp))
                 Text(
-                    text = stringResource(R.string.app_name),
+                    text = stringResource
+                        (R.string.app_name),
                     color = Color.Blue,
                     fontSize = 50.sp,
                     fontWeight = FontWeight.Bold
                 )
             }
-
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(top = 60.dp), // Este padding empurra o conteúdo para baixo
+                    .background(color = Color.Red)
+                    .padding(top = 60.dp),
                 contentAlignment = Alignment.TopCenter
             ) {
                 Column(
+                    modifier = Modifier,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
@@ -69,6 +73,7 @@ fun HomeScreen() {
                         color = Color.Blue,
                         fontSize = 30.sp,
                         fontWeight = FontWeight.Bold
+
                     )
 
                     Card(
@@ -88,32 +93,32 @@ fun HomeScreen() {
                         fontSize = 21.sp,
                         textAlign = TextAlign.Center
                     )
+                    Button(
+                        onClick = { },
+                        modifier = Modifier
+                            .height(60.dp)
+                            .width(200.dp),
+                        shape = RoundedCornerShape(16.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFFFDC84B)
+                        )
+                    ) {
+                        Text(
+                            text = stringResource(R.string.button_text),
+                            color = Color.Black,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 18.sp
+                        )
+                    }
+
+
                 }
+
+                }
+
             }
         }
-
-        // Aqui vai o botão fixo no final da tela
-        Button(
-            onClick = { },
-            modifier = Modifier
-                .align(Alignment.BottomCenter) // Alinha o botão na parte inferior
-                .height(60.dp)
-                .width(200.dp),
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFFFDC84B)
-            )
-        ) {
-            Text(
-                text = stringResource(R.string.button_text),
-                color = Color.Black,
-                fontWeight = FontWeight.Bold,
-                fontSize = 18.sp
-            )
-        }
     }
-}
-
 
 
 @Preview
