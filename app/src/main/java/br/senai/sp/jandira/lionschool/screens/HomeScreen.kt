@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement.Bottom
+import androidx.compose.foundation.layout.Arrangement.spacedBy
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -87,17 +88,19 @@ fun HomeScreen() {
                     ) {}
                     Text(
                         modifier = Modifier
-                            .padding(top = 28.dp),
+                            .padding(top = 28.dp)
+                            .padding(horizontal = 20.dp),
                         text = stringResource(R.string.curse_text2),
                         color = Color.Gray,
                         fontSize = 21.sp,
                         textAlign = TextAlign.Center
                     )
+                    Spacer(modifier = Modifier .height(220.dp))
                     Button(
                         onClick = { },
                         modifier = Modifier
                             .height(60.dp)
-                            .width(200.dp),
+                            .width(300.dp),
                         shape = RoundedCornerShape(16.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color(0xFFFDC84B)
@@ -110,7 +113,38 @@ fun HomeScreen() {
                             fontSize = 18.sp
                         )
                     }
+                    Spacer(modifier = Modifier.height(80.dp))
 
+                    Row (
+                        modifier = Modifier
+                            .fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceEvenly
+                    ){
+                        Image(
+                            painter = painterResource(R.drawable.youtube),
+                            contentDescription = stringResource(R.string.youtube),
+                            modifier = Modifier
+                                .size(40.dp)
+                        )
+                        Image(
+                            painter = painterResource(R.drawable.twitter),
+                            contentDescription = stringResource(R.string.twitter),
+                            modifier = Modifier
+                                .size(40.dp)
+                        )
+                        Image(
+                            painter = painterResource(R.drawable.instagram),
+                            contentDescription = stringResource(R.string.instagram),
+                            modifier = Modifier
+                                .size(40.dp)
+                        )
+                        Image(
+                            painter = painterResource(R.drawable.facebook),
+                            contentDescription = stringResource(R.string.facebook),
+                            modifier = Modifier
+                                .size(40.dp)
+                        )
+                    }
 
                 }
 
