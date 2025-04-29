@@ -94,21 +94,25 @@ fun CurseScreen() {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            Row {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),  // Espaço entre o ícone e o texto
+                verticalAlignment = Alignment.CenterVertically  // Centraliza o ícone e o texto verticalmente
+            ) {
                 Image(
                     painter = painterResource(R.drawable.lista),
                     contentDescription = stringResource(R.string.courses),
-                    modifier = Modifier
-                        .size(36.dp)
+                    modifier = Modifier.size(36.dp)
                 )
 
                 Text(
                     text = stringResource(R.string.courses),
-                    fontSize = 23.sp,
+                    fontSize = 25.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Blue
                 )
             }
+
             Spacer(modifier = Modifier .height(10.dp))
             Box(
                 modifier = Modifier
@@ -265,9 +269,9 @@ fun CurseScreen() {
                     .height(209.dp)
                     .background(
                         brush = Brush.linearGradient(
-                            colors = listOf(Color(0xFF3347B0), Color(0xFFCFD4EA))
+                            colors = listOf(Color(0xFF5A659F), Color(0xFF9FA9E1))
                         ),
-                        shape = RoundedCornerShape(20.dp)
+                                shape = RoundedCornerShape(20.dp)
                     )
             ) {
                 Column(

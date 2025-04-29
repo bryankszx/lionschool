@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import br.senai.sp.jandira.lionschool.screens.CurseScreen
 import br.senai.sp.jandira.lionschool.screens.HomeScreen
+import br.senai.sp.jandira.lionschool.screens.ListStudentScreen
 import br.senai.sp.jandira.lionschool.ui.theme.LionSchoolTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,6 +24,7 @@ class MainActivity : ComponentActivity() {
             LionSchoolTheme {
                HomeScreen()
                 CurseScreen()
+                ListStudentScreen()
             }
         }
     }

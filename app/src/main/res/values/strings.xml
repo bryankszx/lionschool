@@ -21,4 +21,8 @@
     <string name="rds_text">Learn to design communication networks</string>
     <string name="ele_text">Learn to design communication networks</string>
     <string name="dev_text">Learn to develop web and mobile applications</string>
+    <string name="All">All</string>
+    <string name="Studying">Studying</string>
+    <string name="finished">Finished</string>
+    <string name="studylist">Students List</string>
 </resources>

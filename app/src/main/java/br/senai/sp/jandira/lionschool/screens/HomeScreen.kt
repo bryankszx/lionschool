@@ -3,8 +3,6 @@ package br.senai.sp.jandira.lionschool.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.Arrangement.Bottom
-import androidx.compose.foundation.layout.Arrangement.spacedBy
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -61,7 +59,7 @@ fun HomeScreen() {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(color = Color.Red)
+                    .background(color = Color.White)
                     .padding(top = 60.dp),
                 contentAlignment = Alignment.TopCenter
             ) {
